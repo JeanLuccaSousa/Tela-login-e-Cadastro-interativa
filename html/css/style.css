@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -29,6 +34,24 @@
     background-color: #58af9b;
     width: 40%;
     height: 100%;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title-welcome {
+    color: #fff;
+}
+
+.description {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 30px;
+
 }
 
 .first-content {
@@ -57,4 +80,24 @@ form {
 .second-content {
     position: absolute;
     display: none;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn-primary:hover {
+    background-color:#fff;
+    color:#58af9b;
 }
