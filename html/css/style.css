@@ -14,13 +14,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 120vh;
-    background-color: red;
+    background-color: #ecf0f1;
 }
 
 .content {
     background-color: #fff;
     border-radius: 15px;
-    width: 80%;
+    width: 960px;
     height: 50%;
     /* display: flex; Como defini um space-between, nem precisa mais do display-flex */
     justify-content: space-between;
@@ -131,6 +131,7 @@ form input {
     cursor: pointer;
     width: 150px;
     align-self: center;
+   border: none;
 }
 
 .btn-primary {
@@ -141,4 +142,15 @@ form input {
 .btn-primary:hover {
     background-color:#fff;
     color:#58af9b;
+}
+
+.btn-second {
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+}
+
+.btn-second:hover {
+    background-color: #fff;
+    border: 1px solid #58af9b;
+    color: #58af9b;
 }
