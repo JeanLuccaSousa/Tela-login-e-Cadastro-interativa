@@ -34,6 +34,8 @@ body {
     background-color: #58af9b;
     width: 40%;
     height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .title {
@@ -63,7 +65,8 @@ body {
 }
 
 .first-content {
-    display: flex;
+    /* display: flex; */
+    display: none;
 }
 
 .first-column {
@@ -108,8 +111,15 @@ body {
 }
 
 /* pseudo-classe */
-.item-social-media:not(:first-child) { 
+.link-social-media:not(:first-child) { 
     margin-left: 10px;
+}
+
+.link-social-media:hover .item-social-media { 
+    background-color: #58af9b;
+    color: #fff;
+    border-color: #58af9b;
+    
 }
 
 
@@ -141,7 +151,8 @@ form input {
 
 .second-content {
     position: absolute;
-    display: none;
+    /* display: none; */
+    display: flex;
 }
 
 .btn {
@@ -167,6 +178,7 @@ form input {
     background-color:#fff;
     color:#58af9b;
 }
+
 
 .btn-second {
     background-color: #58af9b;
