@@ -6,21 +6,20 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 140vh;
+    height: 100vh;
     background-color: #ecf0f1;
 }
 
 .content {
     background-color: #fff;
     border-radius: 15px;
-    width: 960px;
+    width: 80%;
     height: 50%;
     /* display: flex; Como defini um space-between, nem precisa mais do display-flex */
     justify-content: space-between;
@@ -44,7 +43,7 @@ body {
     text-transform: capitalize;
 }
 
-.title-welcome {
+.title-primary {
     color: #fff;
 }
 
@@ -56,7 +55,6 @@ body {
 
 .description-primary {
     color: #fff;
-
 }
 
 .description-second {
@@ -65,8 +63,8 @@ body {
 }
 
 .first-content {
-    /* display: flex; */
-    display: none;
+    display: flex; 
+    /* display: none; */
 }
 
 .first-column {
@@ -122,8 +120,6 @@ body {
     
 }
 
-
-
 form {
     display: flex;
     flex-direction: column;
@@ -151,8 +147,8 @@ form input {
 
 .second-content {
     position: absolute;
-    /* display: none; */
-    display: flex;
+    display: none; 
+    /* display: flex;   */
 }
 
 .btn {
