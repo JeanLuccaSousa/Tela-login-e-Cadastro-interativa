@@ -19,7 +19,7 @@ body {
 .content {
     background-color: #fff;
     border-radius: 15px;
-    width: 80%;
+    width: 960px;
     height: 50%;
     /* display: flex; Como defini um space-between, nem precisa mais do display-flex */
     justify-content: space-between;
@@ -35,6 +35,8 @@ body {
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+
+    left:60%;
 }
 
 .title {
@@ -59,12 +61,11 @@ body {
 
 .description-second {
     color: #2f8c8d;
-
 }
 
 .first-content {
     display: flex; 
-    /* display: none; */
+    display: none; 
 }
 
 .first-column {
@@ -100,10 +101,6 @@ body {
     height: 35px;
     line-height: 35px;
     text-align: center;
-   
-}
-
-.item-social-media a {
     color: #95a5a6;
    
 }
@@ -124,13 +121,14 @@ form {
     display: flex;
     flex-direction: column;
     width: 55%;
+    text-align: center;
 }
 
 form input {
     height: 45px;
-    width: 100%;
+    width: 100%; 
     border: none;
-    background-color:#ecf0f1;
+    background-color:#ecf0f1;  
 }
 
 .label-input {
@@ -143,12 +141,6 @@ form input {
 .icon-modify {
     color: #7f8c8d;
     padding: 0 5px;
-}
-
-.second-content {
-    position: absolute;
-    display: none; 
-    /* display: flex;   */
 }
 
 .btn {
@@ -186,3 +178,31 @@ form input {
     border: 1px solid #58af9b;
     color: #58af9b;
 }
+
+/* Second content*/
+
+.second-content {
+    position: absolute; 
+    display: flex;   
+}
+
+.second-content .first-column {
+    order: 2;
+}
+
+.second-content .second-column {
+    order: 1;
+}
+
+.password {
+    color: #34495e;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.password::first-letter {
+    text-transform: capitalize;
+
+}
+
