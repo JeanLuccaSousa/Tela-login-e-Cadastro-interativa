@@ -20,7 +20,7 @@ body {
     background-color: #fff;
     border-radius: 15px;
     width: 960px;
-    height: 50%;
+    height: 70%;
     /* display: flex; Como defini um space-between, nem precisa mais do display-flex */
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,7 @@ body {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 
-    left:60%;
+    left:0%;
 }
 
 .title {
@@ -65,17 +65,20 @@ body {
 
 .first-content {
     display: flex; 
-    display: none; 
+}
+
+.first-content .second-column {
+    z-index: 11;
 }
 
 .first-column {
     text-align: center;
-    flex: 1 0 auto;
+    width: 40%;
     z-index: 10;
 }
 
 .second-column {
-    flex: 2 0 auto;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,11 +86,13 @@ body {
 
 .title-second {
     color: #58af9b;
+    margin-bottom: 15px;
 }
 
 .list-social-media {
     display: flex;
     list-style-type: none;
+    margin-bottom: 5px;
 }
 
 .social-media {
@@ -110,6 +115,10 @@ body {
     margin-left: 10px;
 }
 
+.link-social-media .item-social-media {
+    transition: background-color .5s;
+}
+
 .link-social-media:hover .item-social-media { 
     background-color: #58af9b;
     color: #fff;
@@ -130,6 +139,7 @@ form input {
     border: none;
     background-color:#ecf0f1;  
 }
+
 
 .label-input {
     background-color: #ecf0f1;
@@ -160,6 +170,7 @@ form input {
 .btn-primary {
     background-color: transparent;
     border: 1px solid #fff;
+    transition: background-color .5s;
 }
 
 .btn-primary:hover {
@@ -171,6 +182,7 @@ form input {
 .btn-second {
     background-color: #58af9b;
     border: 1px solid #58af9b;
+    transition: background-color .5s;
 }
 
 .btn-second:hover {
@@ -188,21 +200,48 @@ form input {
 
 .second-content .first-column {
     order: 2;
+    z-index: -1;
+    
 }
 
 .second-content .second-column {
     order: 1;
+    opacity: 0;
 }
 
 .password {
     color: #34495e;
     font-size: 14px;
-    text-decoration: none;
+    /* text-decoration: none; */
     margin: 15px 0;
 }
 
 .password::first-letter {
     text-transform: capitalize;
 
+}
+
+.sign-in-js .first-content .first-column, .sign-in-js .first-content .second-column {
+    z-index: -1;
+}
+
+.sign-in-js .second-content .first-column, .sign-in-js .second-content .second-column {
+    z-index: 11;
+}
+
+.sign-in-js .content::before {
+    left: 60%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.sign-up-js .second-content .first-column, .sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.sign-up-js .first-content .first-column, .sign-up-js .first-content .second-column {
+    z-index: 11;
 }
 
