@@ -5,7 +5,7 @@ $senha = '';
 $database = 'login';
 $host = 'localhost';
 
-$msqli = new mysqli($usuario, $senha, $database, $host);
+$mysqli = new mysqli($host, $usuario, $senha, $database);
 
 if($mysqli->error) {
     die("Falha ao conectar com o banco de dados: " . $mysqli->error);
