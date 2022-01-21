@@ -2,8 +2,38 @@
 include('conexao.php');
 
 if(isset($_POST['email']) || isset($_POST['senha'])) { //Isset == 'Se existir'
-    if(strlen($_POST['email']) == 0 ) {
+    if(strlen($_POST['email']) == 0 ) { //strlen -> Quantidade de caracteres
+        echo 'Preencha seu e-mail';
+    } else if(strlen($_POST['senha']) == 0 ) {
+        echo 'Preencha sua senha';
+    } else {
+        $email = $mysqli->real_escape_string($_POST['email']);
+        $senha = $mysqli->real_escape_string($_POST['senha']);
 
+        $sql_code = "SELECT * FROM usuários WHERE email = '$email' and senha = '$senha'"; // Para verificar o usuário e a senha ||| * Quer dizer, selecionar tudo desta tabela
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $msqli->error); // die(); Caso de algum problema no carregamento, ele retorna o tipo de erro
+
+        $quantidade = $sql_query->num_rows;
+
+        if($quantidade == 1) {
+            $usuario = $sql_query->fetch_assoc();
+
+            if(!isset($_SESSION)) { //!isset -> Se não existir uma sessão, inicia-se outra
+                session_start();
+            }
+
+            $_SESSION['user'] = $usuario['id']; // Iniciando uma outra sessão com um novo usuário
+            $_SESSION['nome'] = $usuario['nome']; // e com o nome dele
+            // Variável $_SESSION continua válida mesmo quando a pessoa troca de página
+
+            // $_GET = Só continua válida se ela estiver na URL;
+            // $_POST = Só continua válida quando um dado é enviado por formulário
+
+            header("Location: painel.php"); // Assim que o usuário é logado, ele é direcionado para a página
+
+        } else {
+            echo 'Falha ao logar! E-mail ou senha incorretos';
+        }
     }
 }
 ?>
@@ -50,11 +80,11 @@ if(isset($_POST['email']) || isset($_POST['senha'])) { //Isset == 'Se existir'
                     </label>
                     <label class="label-input">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" name="email">
                     </label>
                     <label class="label-input">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" name="senha">
                     </label>
                     <button type="submit" class="btn btn-second">Sign up</button>
                 </form>
