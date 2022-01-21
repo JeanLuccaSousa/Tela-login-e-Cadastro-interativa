@@ -30,7 +30,7 @@ body {
 .content::before {
     content: "";
     position:absolute;
-    background-color: #58af9b;
+    background-color: #9400d3;
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;

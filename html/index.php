@@ -1,7 +1,7 @@
 <?php
 include('conexao.php');
 
-if(isset($_POST['email']) || isset($_POST['senha'])) { <!--Isset == 'Se existir'-->
+if(isset($_POST['email']) || isset($_POST['senha'])) { //Isset == 'Se existir'
     if(strlen($_POST['email']) == 0 ) {
 
     }
@@ -27,7 +27,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) { <!--Isset == 'Se existir'
     <div class="container">
         <div class="content first-content">
             <div class="first-column">
-                <h2 class="title title-primary">Welcome back!</h2>
+                <h2 class="title title-primary"> back!</h2>
                 <p class="description description-primary">To keep connected with us</p>
                 <p class="description description-primary">please login with your personal info</p>
                 <button id="signin" class="btn btn-primary">Sign in</button>
